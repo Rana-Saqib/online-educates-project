@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            justify-self: center;
+            align-items: center;
+            background: #23e3c2;
+        } */
+
+        .section{
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider{
+            width: 800px;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .slide{
+            width: 500%;
+            height: 500px;
+            display: flex;
+        }
+
+        .slide input{
+            display: none;
+        }
+
+        .st{
+            width: 20%;
+            transition: 2s;
+        }
+
+        .st img{
+            width: 800px;
+            height: 500px;
+        }
+
+        .nav-m{
+            position: absolute;
+            width: 800px;
+            margin-top: -40px;
+            justify-content: center;
+            display: flex;
+        }
+
+        .m-btn{
+            border: 2px solid #23e3c2;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .m-btn:not(:last-child){
+            margin-right: 30px;
+        }
+
+        .m-btn:hover{
+            background-color: #23e3c2;
+        }
+
+        #radio1:checked ~.first{
+            margin-left: 0;
+        }
+
+        #radio2:checked ~.first{
+            margin-left: -20%;
+        }
+
+        #radio3:checked ~.first{
+            margin-left: -40%;
+        }
+
+        #radio4:checked ~.first{
+            margin-left: -60%;
+        }
+
+        .nav-auto{
+            position: absolute;
+            width: 800px;
+            margin-top: 460px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-auto div{
+            border: 2px solid #23e3c2;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="slider">
+            <div class="slide">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="st first">
+                    <img src="bag1.jpg" alt="">
+                </div>
+
+                <div class="st">
+                    <img src="bag2.jpg" alt="">
+                </div>
+
+                <div class="st">
+                    <img src="bag3.jpg" alt="">
+                </div>
+
+                <div class="st">
+                    <img src="bag4.jpg" alt="">
+                </div>
+
+                <div class="nav-auto">
+                    <div class="a-b1"></div>
+                    <div class="a-b2"></div>
+                    <div class="a-b3"></div>
+                    <div class="a-b4"></div>
+                </div>
+            </div>
+            <div class="nav-m">
+                <label for="radio1" class="m-btn"></label>
+                <label for="radio2" class="m-btn"></label>
+                <label for="radio3" class="m-btn"></label>
+                <label for="radio4" class="m-btn"></label>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
